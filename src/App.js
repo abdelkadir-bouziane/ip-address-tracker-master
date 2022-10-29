@@ -1,5 +1,14 @@
+import React from "react";
+import Header from "./components/Header";
+import Map from "./components/Map";
+
 function App() {
-  return <h1> Hello world !</h1>;
+  return (
+    <>
+      <Header />
+      <Map />
+    </>
+  );
 }
 
 export default App;
