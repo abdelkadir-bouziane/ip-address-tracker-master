@@ -90,6 +90,7 @@ header > h1 {
   display: flex;
   width: fit-content;
   position: absolute;
+  z-index: 999;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
@@ -118,13 +119,13 @@ header > h1 {
 
 .ip-adress-infos > div p {
   color: rgb(44, 44, 44);
-  font-size: 1.5em;
+  font-size: 1.35em;
   font-weight: 500;
 }
 
 /*---------------- Styling the Map component ----------------*/
 
-.map {
-  background-color: rgba(0, 0, 0, 0.3);
+#map {
   flex: 1;
+  overflow: hidden;
 }

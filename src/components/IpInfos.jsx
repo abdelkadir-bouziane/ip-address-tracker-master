@@ -1,28 +1,27 @@
-import { useState } from "react";
+import React from "react";
+import { useContext } from "react";
+import IpInfoContext from "../contexts/IpInfoContext";
 
 function IpInfos() {
-  const [ipAdress, setIpAdress] = useState("192.212.174.101");
-  const [location, setLocation] = useState("Brooklyn, NY 10001");
-  const [timezone, setTimezone] = useState("UTC -05:00");
-  const [isp, setIsp] = useState("SpaceX Starlink");
+  const { lastIpInfos } = useContext(IpInfoContext);
 
   return (
     <article className="ip-adress-infos">
       <div>
         <h3>IP Address</h3>
-        <p>{ipAdress}</p>
+        <p>{lastIpInfos.ipAddress}</p>
       </div>
       <div>
         <h3>Location</h3>
-        <p>{location}</p>
+        <p>{`${lastIpInfos.city}, ${lastIpInfos.state} ${lastIpInfos.postalCode}`}</p>
       </div>
       <div>
         <h3>Timezone</h3>
-        <p>{timezone}</p>
+        <p>{`UTC ${lastIpInfos.timezone}`}</p>
       </div>
       <div>
         <h3>ISP</h3>
-        <p>{isp}</p>
+        <p>{lastIpInfos.isp}</p>
       </div>
     </article>
   );

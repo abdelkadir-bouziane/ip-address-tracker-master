@@ -1,3 +1,4 @@
+import React from "react";
 import IpSearchBar from "./IpSearchBar";
 import IpInfos from "./IpInfos";
 
