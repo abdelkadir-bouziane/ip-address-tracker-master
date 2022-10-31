@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import axios from "axios";
 
 const IpInfoContext = createContext();
 
@@ -18,19 +17,19 @@ export const IpInfoProvider = ({ children }) => {
   });
 
   const getIpInfos = (ip) => {
-    return axios
-      .get(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=at_WtpadgGHbefnLezVhsJOvhRzRnr0u&ipAddress=${ip}`
-      )
+    return fetch(
+      `https://geo.ipify.org/api/v2/country,city?apiKey=at_6ObQJI78VcANHQvjU9XIOpbVh3Dxk&ipAddress=${ip}`
+    )
+      .then((res) => res.json())
       .then((res) => ({
-        ipAddress: res.data.ip,
-        isp: res.data.isp,
-        timezone: res.data.location.timezone,
-        city: res.data.location.city,
-        state: res.data.location.region,
-        postalCode: res.data.location.postalCode,
-        lat: res.data.location.lat,
-        lng: res.data.location.lng,
+        ipAddress: res.ip,
+        isp: res.isp,
+        timezone: res.location.timezone,
+        city: res.location.city,
+        state: res.location.region,
+        postalCode: res.location.postalCode,
+        lat: res.location.lat,
+        lng: res.location.lng,
       }));
   };
 
@@ -40,9 +39,9 @@ export const IpInfoProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    axios
-      .get("https://geolocation-db.com/json/")
-      .then((res) => res.data.IPv4)
+    fetch("https://geolocation-db.com/json/")
+      .then((res) => res.json())
+      .then((res) => res.IPv4)
       .then((ip) => {
         setUserIpAdress(ip);
         return getIpInfos(ip);

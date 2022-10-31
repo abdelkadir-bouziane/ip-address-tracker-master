@@ -38,12 +38,14 @@ header > h1 {
   font-size: 1.7em;
   font-weight: 500;
   margin-bottom: 0.7em;
+  margin-top: 0.3em;
 }
 
 /* Styling the IpSearchBar component */
 
 .ip-search-bar {
   margin-bottom: 70px;
+  display: flex;
 }
 
 .ip-search-bar input {
@@ -58,6 +60,7 @@ header > h1 {
   padding: 0 1em;
   color: hsl(0, 0%, 17%);
   letter-spacing: 1px;
+  display: block;
 }
 
 .ip-search-bar button {
@@ -69,6 +72,7 @@ header > h1 {
   background-color: black;
   color: white;
   cursor: pointer;
+  display: block;
 }
 
 .ip-search-bar button:hover {
@@ -76,7 +80,7 @@ header > h1 {
 }
 
 .ip-search-bar button .arrow-icon {
-  transform: scale(1.6) translate(0, 1.5px);
+  transform: scale(1.6) translate(0, 1px);
 }
 
 .ip-search-bar input:focus {
@@ -90,7 +94,7 @@ header > h1 {
   display: flex;
   width: fit-content;
   position: absolute;
-  z-index: 999;
+  z-index: 9999;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
@@ -128,4 +132,78 @@ header > h1 {
 #map {
   flex: 1;
   overflow: hidden;
+}
+
+/*---------------- Responsive design ----------------*/
+
+@media screen and (max-width: 1030px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    height: 27%;
+    min-height: 175px;
+  }
+
+  .ip-adress-infos > div {
+    margin: 20px 0;
+    padding: 0 20px;
+    width: 225px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  body {
+    font-size: 12px;
+  }
+
+  header {
+    height: 20%;
+    min-height: 165px;
+  }
+
+  .ip-adress-infos > div {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  body {
+    font-size: 11px;
+  }
+
+  header {
+    height: 36%;
+    min-height: 230px;
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
+
+  .ip-adress-infos {
+    display: block;
+    width: 90vw;
+  }
+
+  .ip-adress-infos > div {
+    text-align: center;
+    width: auto;
+  }
+
+  .ip-adress-infos > div + div {
+    border-left: none;
+  }
+
+  .ip-search-bar input {
+    border-radius: 10px 0 0 10px;
+    width: calc(90vw - 3.2em);
+  }
+
+  .ip-search-bar button {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .ip-adress-infos {
+    border-radius: 10px;
+  }
 }
