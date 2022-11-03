@@ -28,10 +28,10 @@ Users should be able to:
 
 ### Screenshots
 Desktop view
-![Desktop view](./screenshots/desktop_view.jpg)
+![Desktop](./screenshots/desktop_view.jpg)
 
 Smartphone view
-![Smartphone view](./screenshots/smartphone_view.jpg)
+![Smartphone](./screenshots/smartphone_view.jpg)
 
 ### Links
 
