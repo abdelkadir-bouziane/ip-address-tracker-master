@@ -31,6 +31,8 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
 }
 
 header > h1 {
@@ -46,6 +48,8 @@ header > h1 {
 .ip-search-bar {
   margin-bottom: 70px;
   display: flex;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .ip-search-bar input {
@@ -99,6 +103,7 @@ header > h1 {
   left: 50%;
   transform: translate(-50%, 50%);
   border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .ip-adress-infos > div {
@@ -192,6 +197,10 @@ header > h1 {
 
   .ip-adress-infos > div + div {
     border-left: none;
+  }
+
+  .ip-search-bar {
+    border-radius: 10px;
   }
 
   .ip-search-bar input {

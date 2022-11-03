@@ -18,7 +18,7 @@ export const IpInfoProvider = ({ children }) => {
 
   const getIpInfos = (ip) => {
     return fetch(
-      `https://geo.ipify.org/api/v2/country,city?apiKey=at_6ObQJI78VcANHQvjU9XIOpbVh3Dxk&ipAddress=${ip}`
+      `https://geo.ipify.org/api/v2/country,city?apiKey=at_6ObQJI78VcANHQvjU9XIOpbVh3Dxk&domain=${ip}`
     )
       .then((res) => res.json())
       .then((res) => ({

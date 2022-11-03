@@ -34,7 +34,7 @@ function Map() {
       <MapContainer
         center={[lastIpInfos.lat, lastIpInfos.lng]}
         zoomControl={false}
-        zoom={10}
+        zoom={13}
         style={{
           height: "100%",
           width: "100%",
