@@ -27,8 +27,10 @@ Users should be able to:
 - Search for any IP addresses or domains and see the key information and location
 
 ### Screenshots
-
+Desktop view
 ![Desktop view](./screenshots/desktop_view.png)
+
+Smartphone view
 ![Smartphone view](./screenshots/smartphone_view.png)
 
 ### Links
